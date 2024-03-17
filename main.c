@@ -6,13 +6,13 @@
 /*   By: isgoh <isgoh@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 13:23:40 by isgoh             #+#    #+#             */
-/*   Updated: 2024/03/17 10:58:47 by isgoh            ###   ########.fr       */
+/*   Updated: 2024/03/17 17:25:05 by mmohd-yu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int xWidth, int yHeight);
 int		main()
 {
-	rush(7, 7);
+	rush(5, 3);
 	return 0;
 }
