@@ -1,5 +1,7 @@
+#include "rush04.c"
+
 int main()
 {
-    test(8,6);
+    rush(9,4);
     return 0;
 }

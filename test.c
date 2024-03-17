@@ -1,37 +1,37 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <unistd.h>
 
-void putchar(char c){
+void ft_putchar(char c){
     write(1, &c, 1);
 }
 
 void test(int a, int b){
     for(int i = 1; i <= b; i++){
         for(int j = 1; j <= a; j++){
-            if(i == 1 || i == b){
+            if(i == 1){
                 if(j == 1){
-                    putchar('A');
+                    ft_putchar('A');
                 } else if(j == a){
-                    putchar('C');
+                    ft_putchar('C');
                 } else {
-                    putchar('B');
+                    ft_putchar('B');
+                }
+            } else if(i == b){
+                if(j == 1){
+                    ft_putchar('C');
+                } else if(j == a){
+                    ft_putchar('A');
+                } else {
+                    ft_putchar('B');
                 }
             } else{
                 if(j == 1 || j == a){
-                    putchar('B');
+                    ft_putchar('B');
                 } else {
-                    putchar(' ');
+                    ft_putchar(' ');
                 }
             }
         } 
-        putchar('\n');
+        ft_putchar('\n');
     }
 }
 
