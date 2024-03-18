@@ -6,35 +6,40 @@
 /*   By: isgoh <isgoh@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:59:30 by isgoh             #+#    #+#             */
-/*   Updated: 2024/03/17 17:22:49 by mmohd-yu         ###   ########.fr       */
+/*   Updated: 2024/03/18 09:51:30 by isgoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 void	ft_putchar(char c);
 
-void	rush(int x, int y)
+void	rush(int xW, int yH)
 {
-	int	xW;
-	int	yH;
+	int	x;
+	int	y;
 
-	xW = 0;
-	yH = 1;
-	while ((yH <= y && xW <= x))
+	x = 0;
+	y = 1;
+	while ((y <= yH && x <= xW))
 	{
-		xW++;
-		if (xW >= x + 1)
+		x++;
+		if (x >= xW + 1)
 		{
 			ft_putchar('\n');
-			xW = 0;
-			yH = yH + 1;
+			x = 0;
+			y = y + 1;
 		}
-		else if ((xW == 1 && yH == 1) || (xW >= x && yH >= y && y != 1))
+		else if (x <= 0 || y <= 0)
+			write(1, "use positive lah bro", 20);
+		else if (x == 1 && y == 1)
 			ft_putchar('A');
-		else if ((xW == x && yH == 1) || (xW == 1 && yH == y))
+		else if ((x == xW && y == 1) || (x == 1 && y == yH))
 			ft_putchar('C');
-		else if ((xW >= 2 || xW == x - 1) && (yH == 1 || yH == y))
+		else if (x == xW && y == yH)
+			ft_putchar('A');
+		else if ((x >= 2 || x == xW - 1) && (y == 1 || y == yH))
 			ft_putchar('B');
-		else if ((xW == 1 || xW == x) && (yH >= 2 || yH == y - 1))
+		else if ((x == 1 || x == xW) && (y >= 2 || y == yH - 1))
 			ft_putchar('B');
 		else
 			ft_putchar(' ');
