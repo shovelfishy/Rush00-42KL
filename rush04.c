@@ -16,6 +16,10 @@ void ft_print_box(char tl, char tr, char bl, char br, char h, char v, int lines,
 				if(j == 0)
 				{
 					ft_putchar(tl);
+					if(cols == 1)
+					{
+						ft_putchar('\n');
+					}
 				}
 				else if(j == cols - 1)
 				{
@@ -34,6 +38,10 @@ void ft_print_box(char tl, char tr, char bl, char br, char h, char v, int lines,
 				if(j == 0)
 				{
 					ft_putchar(bl);
+					if(cols == 1)
+					{
+						ft_putchar('\n');
+					}	
 				}
 				else if(j == cols - 1)
 				{
@@ -51,6 +59,10 @@ void ft_print_box(char tl, char tr, char bl, char br, char h, char v, int lines,
 				if(j == 0)
 				{
 					ft_putchar(v);
+					if(cols == 1)
+					{
+						ft_putchar('\n');
+					}
 				}
 				else if(j == cols - 1)
 				{
